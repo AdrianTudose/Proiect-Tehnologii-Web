@@ -1,0 +1,27 @@
+body{
+    background-color: grey;
+}
+
+.mapdiv{
+    width:100%;
+    margin:auto;
+}
+
+.mapdiv path{
+    fill:rgb(100, 100, 240);
+    stroke:black;
+    stroke-width: 1px;
+    transition-timing-function:  0.1s;
+}
+
+.mapdiv path:hover{
+    fill:red;
+}
+
+.mapdiv path:target{
+    fill:white;
+}
+
+#AL.active{
+    fill:white;
+}
