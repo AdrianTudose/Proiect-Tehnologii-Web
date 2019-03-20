@@ -1,0 +1,88 @@
+body
+{
+	background: gold;
+}
+
+.Form
+{
+        max-width: 500px;
+        background : mintcream;
+        border-radius: 8px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        font-weight: bold;
+        color: gray;
+		transform: translate(-50%, -50%);
+		opacity: 0.93;
+        
+}
+
+.Form fieldset{
+	border: none;
+}
+
+.Form legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+
+.Form input,textarea
+{
+    font-family: Georgia, "Times New Roman", Times, serif;
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	margin-bottom: 30px;
+}
+
+.Form input:focus,textarea:focus
+{
+    background: #d2d9dd;
+}
+
+.Form input[type="submit"]
+{
+	padding: 22px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+    background : gray;
+    opacity: 0.7;
+	font-size: 18px;
+	text-align: center;
+    font-style: normal;
+    font-weight: bold;
+	width: 100%;
+	border: 1px solid white;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+
+.Form input[type="submit"]:hover
+{
+	background: slateblue;
+}
+
+.Form .number {
+	background: gray;
+	color: #fff;
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	font-size: 0.8em;
+    margin-right: 4px;
+    text-align: center;
+    border-radius: 15px 15px 15px 0px;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
