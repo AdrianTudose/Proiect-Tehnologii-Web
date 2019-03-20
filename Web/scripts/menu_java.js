@@ -8,7 +8,7 @@ function functie() {
         document.getElementById("MenuButtonLine1").style.top="50%";
         document.getElementById("MenuButtonLine3").style.transform="rotate(-45deg)";
         document.getElementById("MenuButtonLine3").style.top="50%";
-        /*Menu*/        
+        /*Menu*/
         document.getElementById("MenuBar").style.width = "100%";
         const listItems = document.getElementById("MenuBar").getElementsByTagName('li');        
         for (let i = 0; i < listItems.length; i++) {
@@ -17,6 +17,7 @@ function functie() {
             listItems[i].style.left="300px";
             listItems[i].style.width=(window.innerWidth-300)/listItems.length;
         }
+        
         /*Select Menu*/
         document.getElementById("SelectionList").style.width = 300;
         document.getElementById("SelectionList").style.height = "100%";        
@@ -37,8 +38,10 @@ function functie() {
         document.getElementById("MenuButtonLine2").style.display="block";
         document.getElementById("MenuButtonLine1").style.transform="rotate(0deg)";
         document.getElementById("MenuButtonLine1").style.top="30%";
+        document.getElementById("MenuButtonLine1").style.transform="translate(-50%,-50%)";
         document.getElementById("MenuButtonLine3").style.transform="rotate(0deg)";
         document.getElementById("MenuButtonLine3").style.top="70%";
+        document.getElementById("MenuButtonLine3").style.transform="translate(-50%,-50%)";
         /*Menu*/        
         document.getElementById("MenuBar").style.width = 50;
         const listItems = document.getElementById("MenuBar").getElementsByTagName('li');        
