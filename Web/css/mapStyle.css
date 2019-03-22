@@ -1,13 +1,12 @@
 .mapdiv{
-    width:100%;
     margin:auto;
 }
 
 .mapdiv path{
-    fill:black;
+    fill:gray;
     stroke:white;
     stroke-width: 1px;
-    transition-timing-function:  0.1s;
+    transition : 0.5s;
 }
 
 .mapdiv path:hover{
