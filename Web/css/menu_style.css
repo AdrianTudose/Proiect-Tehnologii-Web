@@ -1,0 +1,136 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../images/stars_texture.jpg');
+    overflow:hidden;
+}
+
+#MenuButton {
+    width: 50;
+    height: 50;      
+    position: absolute;
+    background: transparent;
+    border-width: 10px;
+    left: 0;
+    top: 0; 
+    z-index: 3;
+    cursor: pointer;    
+}
+
+#MenuButtonLine1,
+#MenuButtonLine2,
+#MenuButtonLine3 {
+    width: 30px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 1.35s;
+}
+
+#MenuButtonLine1 {
+    top:30%;
+}
+
+#MenuButtonLine2 {
+    top:50% ;
+}
+
+#MenuButtonLine3 {
+    top:70%;
+}
+
+#MenuBar {
+    width: 50;
+    height: 50;
+    background: black;
+    opacity: 0.7;
+    transition: 0.5s;
+    left: 0;
+    top: 0;  
+    z-index: 2;    
+}
+
+#MenuBar ul {
+    float:left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    list-style-type: none;    
+    margin: 0;    
+    padding: 0;
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-between;
+}
+
+#MenuBar ul li {
+    position: absolute;
+    height: 50;
+    color: transparent;
+    left: 0;
+    top: 0;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    transition: 2s;
+}
+
+#MenuBar ul li:hover {
+    box-shadow: 0px 0px 5px 5px white;
+    z-index: 10000;
+}
+
+#SelectionList {
+    width: 50;
+    height: 50;
+    background: black;
+    opacity: 0.8;
+    transition: width 0.5s, height 1s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#SelectionList ul {
+    left: 0;
+    top: 0;
+    margin: 0;    
+    padding: 0;
+}  
+
+#SelectionList ul li {
+    height: 50;
+    color: transparent;
+    left: 0;
+    top: 0;
+    user-select: none;
+    text-align: center;  
+    display: none;
+}
+
+#SelectionList ul li div {
+    display: inline-block;
+    transition: width 2s;    
+}
+
+#SelectionList ul li div select {
+    background-color: black;
+    color: white;
+    height: 30;
+    font-size: 17;
+    outline: none;
+}
+
+#SelectionList ul li div input {
+    background-color: black;
+    color: white;
+    height: 30;
+    font-size: 17;
+    outline: none;
+}
+
+
