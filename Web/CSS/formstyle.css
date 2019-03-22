@@ -1,6 +1,9 @@
 body
 {
-	background: gold;
+	background: url(../images/stars_texture.jpg);
+	margin: 0px;
+	padding: 0px;
+	overflow:hidden;
 }
 
 .Form
