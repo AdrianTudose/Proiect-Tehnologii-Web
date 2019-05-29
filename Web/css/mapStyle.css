@@ -1,0 +1,16 @@
+.mapdiv{
+    margin-top: 15px;
+}
+
+.mapdiv path{
+    fill:gray;
+    stroke:white;
+    stroke-width: 1px;
+    transition : 0.5s;
+}
+
+.mapdiv path:hover{
+    fill:red;
+}
+
+
