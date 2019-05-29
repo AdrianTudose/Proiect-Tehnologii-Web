@@ -1,4 +1,4 @@
-function functie() {
+function menu_function() {
     if(document.getElementById("MenuButton").offsetWidth == 50)
     {
         /*Button*/
@@ -17,19 +17,6 @@ function functie() {
             listItems[i].style.left="300px";
             listItems[i].style.width = String((window.innerWidth-300)/listItems.length).concat("px");
         }
-        
-        /*Select Menu*/
-        document.getElementById("SelectionList").style.width = "300px";
-        document.getElementById("SelectionList").style.height = "100%";        
-        const listItems1 = document.getElementById("SelectionList").getElementsByTagName('li');        
-        for (let i = 0; i < listItems1.length; i++) {
-            listItems1[i].style.color="white";
-            listItems1[i].style.position="relative";
-            listItems1[i].style.top="50px";
-            listItems1[i].style.height=String((window.innerHeight-50)/listItems1.length).concat("px");
-            listItems1[i].style.width="300px";
-            listItems1[i].style.display="block";
-        }   
     }
     else
     {
@@ -52,19 +39,6 @@ function functie() {
             listItems[i].style.top="0px";
             listItems[i].style.width="50px";
         }
-        /*Select Menu*/
-        document.getElementById("SelectionList").style.width = "50px";
-        document.getElementById("SelectionList").style.height = "50px";        
-        const listItems1 = document.getElementById("SelectionList").getElementsByTagName('li');        
-        for (let i = 0; i < listItems1.length; i++) {
-            listItems1[i].style.color="transparent";
-            listItems1[i].style.position="absolute";
-            listItems1[i].style.left=0;
-            listItems1[i].style.top=0;
-            listItems1[i].style.height="50px";
-            listItems1[i].style.width="50px";
-            listItems1[i].style.display="none";
-        }
+        
     }
 }
-

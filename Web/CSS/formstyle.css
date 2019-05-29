@@ -1,91 +1,203 @@
-body
-{
-	background: url(../images/stars_texture.jpg);
-	margin: 0px;
-	padding: 0px;
-	overflow:hidden;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+html {
+	width: 100%;
+	height: 100%;
 }
 
-.Form
-{
-        max-width: 500px;
-        background : mintcream;
-        border-radius: 8px;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        font-weight: bold;
-        color: gray;
-		transform: translate(-50%, -50%);
-		opacity: 0.93;
-        
-}
-
-.Form fieldset{
-	border: none;
-}
-
-.Form legend {
-	font-size: 1.4em;
-	margin-bottom: 10px;
-}
-
-.Form input,textarea
-{
-    font-family: Georgia, "Times New Roman", Times, serif;
-	background: rgba(255,255,255,.1);
-	border: none;
-	border-radius: 4px;
-	font-size: 15px;
+body {
+	width: 100%;
+	height: 100%;
 	margin: 0;
-	outline: 0;
-	padding: 10px;
-	width: 100%;
-	box-sizing: border-box; 
-	background-color: #e8eeef;
-	color:#8a97a0;
-	margin-bottom: 30px;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background: #FDFDFD;
 }
 
-.Form input:focus,textarea:focus
-{
-    background: #d2d9dd;
-}
-
-.Form input[type="submit"]
-{
-	padding: 22px 39px 18px 39px;
-	color: #FFF;
-	margin: 0 auto;
-    background : gray;
-    opacity: 0.7;
-	font-size: 18px;
+.migrationImg {
 	text-align: center;
-    font-style: normal;
-    font-weight: bold;
+	width: 150px;
+	margin-left: 440px;
+	margin-top: 30px;
+}
+
+.panel.panel.panel-left h2 {
+	color: white;
+	text-align: center;
+	margin-top: 80px;
+}
+
+.panel.panel.panel-left p {
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	margin-left: 160px;
+	text-align: left;
+}
+
+.container {
 	width: 100%;
-	border: 1px solid white;
-	border-width: 1px 1px 3px;
-	margin-bottom: 10px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	transition: all 0.3s ease;
 }
 
-.Form input[type="submit"]:hover
-{
-	background: slateblue;
+.container .inner {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
-.Form .number {
-	background: gray;
-	color: #fff;
+.container .inner .panel {
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	width: 60%;
+	float: left;
+	transform: skew(-20deg);
+}
+
+.container .inner .panel.panel-left {
+	margin-left: -10%;
+}
+
+.container .inner .panel .panel-content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%) skew(20deg);
+}
+
+.container .inner .panel.panel-right {
+	margin-right: -10%;
+	background: #1B1B1B;
+	opacity: 0.85;
+}
+
+.container .inner .panel.panel-right .panel-content .form {
+	display: block;
+	position: absolute;
+	margin: 0 auto;
+	width: 300px;
+	min-height: 400px;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-25%);
+}
+
+.container .inner .panel.panel-right .panel-content .form h1 {
+	display: block;
+	margin: 0 0 45px 0;
+	color: #B1B1B1;
+	font-weight: 200;
+	font-size: 18px;
+}
+
+.group {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+input {
+	font-size: 13px;
 	height: 25px;
-	width: 25px;
-	display: inline-block;
-	font-size: 0.8em;
-    margin-right: 4px;
-    text-align: center;
-    border-radius: 15px 15px 15px 0px;
-    font-family: "Times New Roman", Times, serif;
-
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 300px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #B1B1B1;
+	color: #B1B1B1;
+	background: rgba(0, 0, 0, 0);
+	opacity: 0.5;
+	transition: 0.2s ease;
 }
 
+input:focus {
+	outline: none;
+	opacity: 1;
+}
+
+label {
+	color: #B1B1B1;
+	font-size: 13px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 15px;
+	opacity: 0.5;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+input:focus~label, input:valid~label {
+	top: -10px;
+	font-size: 12px;
+	color: #B1B1B1;
+	opacity: 1;
+}
+
+.highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+input:focus~.highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+	from {
+		background: #B1B1B1;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@-moz-keyframes inputHighlighter {
+	from {
+		background: #B1B1B1;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@keyframes inputHighlighter {
+	from {
+		background: #B1B1B1;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+a.send-btn {
+	float: right;
+	color: #B1B1B1;
+	transition: 0.2s ease;
+}
+
+a.send-btn:hover {
+	color: #FAFAFA;
+	cursor: pointer;
+}
