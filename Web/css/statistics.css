@@ -1,0 +1,10 @@
+#content-container {
+    text-align : center;
+}
+
+#content {
+    width : 80%;
+    height: 500px;
+    background-color: white;
+    display: inline-block;
+}

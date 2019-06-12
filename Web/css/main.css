@@ -9,16 +9,15 @@ body{
     background-size: cover;
     margin: 0px;
     padding: 0px;
-    overflow:hidden;
 }
 
 
 /*********************************************/
 /*******************MENUBAR******************/
 #MenuButton {
-    width: 45px;
-    height: 45px;      
-    position: absolute;
+    width: 50px;
+    height: 50px;      
+    position: fixed;
     background: transparent;
     border-width: 10px;
     left: 0px;
@@ -34,8 +33,12 @@ body{
     height: 3px;
     background: white;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    left: 10px;    
+    transform-origin: center center;
+}
+
+#MenuButtonLine1,
+#MenuButtonLine3 {
     transition: 1.35s;
 }
 
@@ -66,7 +69,7 @@ body{
 
 #MenuBar ul {
     float:left;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     list-style-type: none;    
@@ -78,7 +81,7 @@ body{
 }
 
 #MenuBar ul li {
-    position: absolute;
+    position: fixed;
     height: 50px;
     color: transparent;
     left: 0px;

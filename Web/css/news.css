@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+.container {
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 50%;
+    height: 60px;
+    background: gray;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #fff inset, -1px -1px 2px #fff inset;
+    border-radius: 25px;
+    margin-left: 25%;
+    opacity: 0.90;
+}
+
+p {
+    margin-left: 60px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: ghostwhite;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
