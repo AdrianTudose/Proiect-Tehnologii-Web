@@ -23,7 +23,7 @@
         <ul>
             <li onclick="location.href='../index.php'"><i class="fas fa-map"></i>Map</li>
             <li onclick="location.href='statistics.php'"><i class="far fa-chart-bar"></i>Statistics</li>
-            <li><i class="far fa-newspaper"></i>News</li>
+            <li onclick="location.href='news.php'"><i class="far fa-newspaper"></i>News</li>
             <li onclick="location.href='form.php'"><i class="fa fa-address-book"></i>Contact</li>
         </ul>
     </div>

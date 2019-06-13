@@ -106,5 +106,31 @@ class MigrationDataBase
 
         return json_encode($rows);
     }
+
+    function migrations_month($countryS,$countryF)
+    {
+     
+        $sql = "SELECT COUNT(*) as 'numar',
+        substr(Date,5,3) as 'luna',REVERSE(SUBSTR(REVERSE(DATE),1,4)) as 'an' from migrations WHERE
+        trim(CountryS) = ? AND trim(CountryF) = ? group by substr(Date,5,3),REVERSE(SUBSTR(REVERSE(DATE),1,4))";
+        $stmt = mysqli_stmt_init($this->conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            return -1;
+        } else {
+            mysqli_stmt_bind_param($stmt, "ss", $countryS, $countryF);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+            while ($row = mysqli_fetch_assoc($result)){
+                $rows[] = $row;
+            }
+            if(!isset($rows))
+                $rows = null;
+        }
+
+        return json_encode($rows);
+    }
+
+
 }
+
 ?>

@@ -9,10 +9,10 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 class MigrattionSearch
 {
 
-    private $consumer = "";
-    private $consumersecret = "";
-    private $accesstoken = "";
-    private $secrettoken =  "";
+    private $consumer = "wqimUKOnPqiVyTLdBNAHkqR8L";
+    private $consumersecret = "K3uHs7yFjPJSMtsQtcvw9eLM9OicqfvZFjRW9Xbiy132Sm5pE1";
+    private $accesstoken = "1131496736751542272-fmWZ6m4WqHzGv3IOzVQKYqKcsGDW80";
+    private $secrettoken =  "qdl8FUsERQdFRafkvNxGdlZ3TOS8FFSWm0q6VQOvCc9kO";
     private $twitter;
 
     /**

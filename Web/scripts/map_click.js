@@ -21,6 +21,7 @@ function colorCountry(e) {
             if (e.target.id == country1_id) {
                 country1_id = country2_id;
             }
+            //document.getElementById(country2_id).addEventListener("mouseover", "fill:red");
         }
         totalClicked = totalClicked - 1;
     }
@@ -102,20 +103,31 @@ function crashPlane() {
     document.getElementById("plane").remove();
     document.getElementById("myAnimation").remove();
     document.getElementById("plane_path").remove();
-    var elements = document.getElementsByClassName("info_country");
+    /*var elements = document.getElementsByClassName("info_country");
     for (element in elements) {
-        elements[element].remove();
-    }
+        if(elements[element].tagName!= null){
+            console.log(elements[element].tagName);
+            elements[element].remove();
+        }
+    }*/
+    document.getElementById("info_box1").remove();
+    document.getElementById("info_box2").remove();
+    document.getElementById("info_box_triangle1").remove();
+    document.getElementById("info_box_triangle2").remove();
+    document.getElementById("info_name1").remove();
+    document.getElementById("info_name2").remove();
+    document.getElementById("info_number1").remove();
+    document.getElementById("info_number2").remove();
 }
 
-function addInfo(x, y, name, number) {
+function addInfo(x, y, name, number, end_id) {
     var width = 50;
     var height = 80;
     var triangle_height = 20;
     var triangle_base = 40;
     var line_space = 30;
     var info_box = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
-    info_box.classList.add("info_country");
+    info_box.setAttribute("id","info_box"+end_id);
     info_box.setAttribute("x", x - width / 2);
     info_box.setAttribute("y", y - height - triangle_height);
     info_box.setAttribute("rx", 10);
@@ -127,7 +139,7 @@ function addInfo(x, y, name, number) {
     document.getElementById("svg2").appendChild(info_box);
 
     var info_box_triangle = document.createElementNS("http://www.w3.org/2000/svg", 'polyline');
-    info_box_triangle.classList.add("info_country");
+    info_box_triangle.setAttribute("id","info_box_triangle"+end_id);
     info_box_triangle.setAttribute("points", x + " " + y + " " + (x - triangle_base / 2) + " " + (y - triangle_height) + " " + (x + triangle_base / 2) + " " + (y - triangle_height));
     info_box_triangle.setAttribute("fill", "purple");
     info_box_triangle.setAttribute("stroke", "purple");
@@ -135,7 +147,7 @@ function addInfo(x, y, name, number) {
 
     //Migration from ... 
     var info_name = document.createElementNS("http://www.w3.org/2000/svg", 'text');
-    info_name.classList.add("info_country");
+    info_name.setAttribute("id","info_name"+end_id);
     info_name.setAttribute("y", y - triangle_height - height + line_space);
     info_name.setAttribute("stroke", "white");
     info_name.setAttribute("fill", "white");
@@ -151,7 +163,7 @@ function addInfo(x, y, name, number) {
 
     //Number
     var info_number = document.createElementNS("http://www.w3.org/2000/svg", 'text');
-    info_number.classList.add("info_country");
+    info_number.setAttribute("id","info_number"+end_id);
     info_number.setAttribute("y", y - triangle_height - height + 2 * line_space);
     info_number.setAttribute("stroke", "white");
     info_number.setAttribute("fill", "white");
@@ -183,8 +195,8 @@ function countMigrations(Countries,coord1,coord2) {
                 addPlane();
                 addPath(coord1[0], coord1[1], coord2[0], coord2[1]);
                 launchPlaneOnPath();
-                addInfo(coord1[0], coord1[1], country1_name, array[0]);
-                addInfo(coord2[0], coord2[1], country2_name, array[1]);
+                addInfo(coord1[0], coord1[1], country1_name, array[0],1);
+                addInfo(coord2[0], coord2[1], country2_name, array[1],2);
             }
         }
         xmlhttp.open("GET", "includes/migrationrequest.php?q=" + Countries, true);
